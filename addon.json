@@ -1,0 +1,11 @@
+{
+	"title"		:	"Garry's Mod Guys DarkRP Modification",
+	"type"		:	"ServerContent",
+	"tags"		:	[ "Roleplay", "" ],
+	"ignore"	:
+	[
+		"*.psd",
+		"*.vcproj",
+		"*.svn*"
+	]
+}
