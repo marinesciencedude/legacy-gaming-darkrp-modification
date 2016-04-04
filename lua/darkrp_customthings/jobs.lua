@@ -177,7 +177,7 @@ TEAM_SWATL = DarkRP.createJob("S.W.A.T. Leader", {
     NeedToChangeFrom = TEAM_SWAT,
     PlayerSpawn = function(ply) ply:SetArmor(50) end,
     category = "Civil Protection",
-    level = 10,
+    level = 15,
 })
 
 TEAM_SWATS = DarkRP.createJob("S.W.A.T. Sniper", {
@@ -225,6 +225,7 @@ TEAM_SWATS = DarkRP.createJob("S.W.A.T. Sniper", {
     vote = true,
     hasLicense = false,
     category = "Gangsters",
+    level = 0,
 })
 
  TEAM_MTHIEF = DarkRP.createJob("Master Thief", {
@@ -245,6 +246,7 @@ TEAM_SWATS = DarkRP.createJob("S.W.A.T. Sniper", {
         ["ar2"] = 60,
     },
     category = "Custom Jobs",
+    level = 0,
 })
 
 TEAM_MOB = DarkRP.createJob("Mob boss", {
@@ -262,6 +264,7 @@ TEAM_MOB = DarkRP.createJob("Mob boss", {
     vote = false,
     hasLicense = false,
     category = "Gangsters",
+    level = 0,
 })
 
 TEAM_GUARD = DarkRP.createJob("Guard", {
@@ -280,6 +283,7 @@ TEAM_GUARD = DarkRP.createJob("Guard", {
     vote = false,
     hasLicense = true,
     category = "For Hire",
+    level = 0,
 })
 
 TEAM_MERC = DarkRP.createJob("Mercenary", {
@@ -303,6 +307,29 @@ TEAM_MERC = DarkRP.createJob("Mercenary", {
         ["ar2"] = 60,
     },
     category = "For Hire",
+    level = 0,
+})
+
+TEAM_GANGSTER_MEDIC = DarkRP.createJob("Gangster Medic", {
+   color = Color(155, 124, 44, 255),
+   model = {"models/player/leet.mdl"},
+   description = [[You are a medic to help in raids or base. Gangsters only.]],
+   weapons = {"med_kit",},
+   command = "gangstermedic",
+   max = 4,
+   salary = 100,
+   admin = 0,
+   vote = false,
+   hasLicense = false,
+   candemote = true,
+   -- CustomCheck
+   medic = false,
+   chief = false,
+   mayor = false,
+   hobo = false,
+   cook = false,
+   category = "Gangster",
+   level = 0,
 })
 
 TEAM_CRIPLEADER = DarkRP.createJob("Cripz Leader", {
@@ -322,6 +349,7 @@ TEAM_CRIPLEADER = DarkRP.createJob("Cripz Leader", {
         ["ar2"] = 60,
     },
     category = "Gangsters",
+    level = 5,
 })
 
 TEAM_CRIP = DarkRP.createJob("Cripz Member", {
@@ -342,6 +370,7 @@ TEAM_CRIP = DarkRP.createJob("Cripz Member", {
         ["ar2"] = 60,
     },
     category = "Gangsters",
+    level = 0,
 })
 
 TEAM_BLOODLEADER = DarkRP.createJob("Bloodz Leader", {
@@ -361,6 +390,7 @@ TEAM_BLOODLEADER = DarkRP.createJob("Bloodz Leader", {
         ["ar2"] = 60,
     },
     category = "Gangsters",
+    level = 5,
 })
 
 TEAM_BLOOD = DarkRP.createJob("Bloodz Member", {
@@ -381,6 +411,7 @@ TEAM_BLOOD = DarkRP.createJob("Bloodz Member", {
         ["ar2"] = 60,
     },
     category = "Gangsters",
+    level = 0,
 })
 
 TEAM_HITMAN = DarkRP.createJob("Hitman", {
@@ -402,6 +433,7 @@ TEAM_HITMAN = DarkRP.createJob("Hitman", {
         ["pistol"] = 36,
     },
     category = "For Hire",
+    level = 10,
 })
 
 TEAM_ADMIN = DarkRP.createJob("Admin On Duty", {
@@ -416,6 +448,7 @@ TEAM_ADMIN = DarkRP.createJob("Admin On Duty", {
     vote = false,
     hasLicense = false,
     customCheck = function(ply) return ply:GetUserGroup() == "trialadmin" or ply:GetUserGroup() == "admin" or ply:GetUserGroup() == "superadmin" or ply:GetUserGroup() == "co-owner" end
+    level = 0,
 })
 
 TEAM_RAND = DarkRP.createJob("Randomo99's Boss Class", {
@@ -443,6 +476,7 @@ TEAM_RAND = DarkRP.createJob("Randomo99's Boss Class", {
     },
     PlayerSpawn =  function(ply) ply:SetArmor(200) end,
     category = "Custom Jobs",
+    level = 0
 })
 
 TEAM_MARINE = DarkRP.createJob("Marine's 'Luigi' Class", {
@@ -470,27 +504,7 @@ TEAM_MARINE = DarkRP.createJob("Marine's 'Luigi' Class", {
     },
     PlayerSpawn =  function(ply) ply:SetArmor(200) end,
     category = "Custom Jobs",
-})
-
-TEAM_GANGSTER_MEDIC = DarkRP.createJob("Gangster Medic", {
-   color = Color(155, 124, 44, 255),
-   model = {"models/player/leet.mdl"},
-   description = [[You are a medic to help in raids or base. Gangsters only.]],
-   weapons = {"med_kit",},
-   command = "gangstermedic",
-   max = 4,
-   salary = 100,
-   admin = 0,
-   vote = false,
-   hasLicense = false,
-   candemote = true,
-   -- CustomCheck
-   medic = false,
-   chief = false,
-   mayor = false,
-   hobo = false,
-   cook = false,
-   category = "Gangster",
+    level = 0,
 })
 
 
