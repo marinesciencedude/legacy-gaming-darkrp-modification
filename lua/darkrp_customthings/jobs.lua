@@ -19,7 +19,7 @@ Add jobs under the following line:
 ---------------------------------------------------------------------------]]
 TEAM_POLICE = DarkRP.createJob("Police Officer", {
     color = Color(25, 25, 170, 255),
-    model = {"models/player/police.mdl", "models/player/police_fem.mdl"},
+    model = {"models/player/nypd/male_02.mdl", "models/player/nypd/male_03.mdl", "models/player/nypd/male_04.mdl", "models/player/nypd/male_05.mdl", "models/player/nypd/male_06.mdl", "models/player/nypd/male_07.mdl", "models/player/nypd/male_08.mdl", "models/player/nypd/male_09.mdl"},
     description = [[The protector of every citizen that lives in the city.
         You have the power to arrest criminals and protect innocents.
         Hit a player with your arrest baton to put them in jail.
@@ -102,7 +102,7 @@ TEAM_SWAT = DarkRP.createJob("S.W.A.T.", {
        PRINT - Yes
        Use E+R to change Fire Mode on certain weapons.
        Yu need to get promoted from Civil Protection.]],
-    weapons = {"arrest_stick", "unarrest_stick", "m9k_usp", "m9k_mp5", "stunstick", "door_ram", "weaponchecker", "breachingcharge"},
+    weapons = {"arrest_stick", "unarrest_stick", "m9k_usp", "m9k_mp5", "stunstick", "door_ram", "weaponchecker", "breachingcharge", "bb_css_smoke_alt"},
     command = "swat",
     max = 4,
     salary = 100,
@@ -154,7 +154,7 @@ TEAM_SWATL = DarkRP.createJob("S.W.A.T. Leader", {
         Type /wanted <name> to alert the public to the presence of a criminal.
         Use E+R to change Fire Mode on certain weapons.
         You need to get promoted from S.W.A.T.]],
-    weapons = {"arrest_stick", "unarrest_stick", "m9k_m92beretta", "m9k_honeybadger", "stunstick", "door_ram", "weaponchecker", "handcuffs", "breachingcharge"},
+    weapons = {"arrest_stick", "unarrest_stick", "m9k_m92beretta", "m9k_honeybadger", "stunstick", "door_ram", "weaponchecker", "handcuffs", "breachingcharge", "bb_css_smoke_alt"},
     command = "swatl",
     max = 1,
     salary = 170,
@@ -191,7 +191,7 @@ TEAM_SWATS = DarkRP.createJob("S.W.A.T. Sniper", {
         The Battering Ram can also unfreeze frozen props (if enabled).
         Type /wanted <name> to alert the public to the presence of a criminal.
         You need to get promoted from S.W.A.T.]],
-    weapons = {"arrest_stick", "unarrest_stick", "m9k_m92beretta", "bb_awp_alt", "stunstick", "door_ram", "weaponchecker", "handcuffs"},
+    weapons = {"arrest_stick", "unarrest_stick", "m9k_m92beretta", "bb_awp_alt", "stunstick", "door_ram", "weaponchecker", "handcuffs", "bb_css_smoke_alt"},
     command = "swats",
     max = 1,
     salary = 140,
@@ -328,7 +328,7 @@ TEAM_GANGSTER_MEDIC = DarkRP.createJob("Gangster Medic", {
    mayor = false,
    hobo = false,
    cook = false,
-   category = "Gangster",
+   category = "Gangsters",
    level = 0,
 })
 
@@ -447,7 +447,7 @@ TEAM_ADMIN = DarkRP.createJob("Admin On Duty", {
     admin = 0,
     vote = false,
     hasLicense = false,
-    customCheck = function(ply) return ply:GetUserGroup() == "trialadmin" or ply:GetUserGroup() == "admin" or ply:GetUserGroup() == "superadmin" or ply:GetUserGroup() == "co-owner" end
+    customCheck = function(ply) return ply:GetUserGroup() == "trialadmin" or ply:GetUserGroup() == "admin" or ply:GetUserGroup() == "superadmin" or ply:GetUserGroup() == "co-owner" end,
     level = 0,
 })
 
