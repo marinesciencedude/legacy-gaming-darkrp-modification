@@ -6,7 +6,7 @@ This file contains your custom jobs.
 This file should also contain jobs from DarkRP that you edited.
 
 Note: If you want to edit a default DarkRP job, first disable it in darkrp_config/disabled_defaults.lua
-	Once you've done that, copy and paste the job to this file and edit it.
+    Once you've done that, copy and paste the job to this file and edit it.
 
 The default jobs can be found here:
 https://github.com/FPtje/DarkRP/blob/master/gamemode/config/jobrelated.lua
@@ -17,9 +17,9 @@ http://wiki.darkrp.com/index.php/DarkRP:CustomJobFields
 
 Add jobs under the following line:
 ---------------------------------------------------------------------------]]
-TEAM_POLICE = DarkRP.createJob("Civil Protection", {
+TEAM_POLICE = DarkRP.createJob("Police Officer", {
     color = Color(25, 25, 170, 255),
-    model = {"models/player/police.mdl", "models/player/police_fem.mdl"},
+    model = {"models/player/nypd/male_02.mdl", "models/player/nypd/male_03.mdl", "models/player/nypd/male_04.mdl", "models/player/nypd/male_05.mdl", "models/player/nypd/male_06.mdl", "models/player/nypd/male_07.mdl", "models/player/nypd/male_08.mdl", "models/player/nypd/male_09.mdl"},
     description = [[The protector of every citizen that lives in the city.
         You have the power to arrest criminals and protect innocents.
         Hit a player with your arrest baton to put them in jail.
@@ -31,17 +31,19 @@ TEAM_POLICE = DarkRP.createJob("Civil Protection", {
     weapons = {"arrest_stick", "unarrest_stick", "m9k_deagle", "stunstick", "door_ram", "weaponchecker"},
     command = "cp",
     max = 4,
-    salary = GAMEMODE.Config.normalsalary * 1.45,
+    salary = 85,
     admin = 0,
     vote = true,
     hasLicense = true,
     ammo = {
         ["pistol"] = 14,
     },
+    PlayerSpawn = function(ply) ply:SetArmor(25) end,
     category = "Civil Protection",
+    level = 0,
 })
 
-TEAM_CHIEF = DarkRP.createJob("Civil Protection Chief", {
+TEAM_CHIEF = DarkRP.createJob("Police Chief", {
     color = Color(20, 20, 255, 255),
     model = "models/player/combine_soldier_prisonguard.mdl",
     description = [[The Chief is the leader of the Civil Protection unit.
@@ -54,7 +56,7 @@ TEAM_CHIEF = DarkRP.createJob("Civil Protection Chief", {
     weapons = {"arrest_stick", "unarrest_stick", "m9k_acr", "m9k_deagle", "stunstick", "door_ram", "weaponchecker"},
     command = "chief",
     max = 1,
-    salary = GAMEMODE.Config.normalsalary * 1.67,
+    salary = 95,
     admin = 0,
     vote = false,
     hasLicense = true,
@@ -64,17 +66,19 @@ TEAM_CHIEF = DarkRP.createJob("Civil Protection Chief", {
         ["pistol"] = 14,
     },
     NeedToChangeFrom = TEAM_POLICE,
+    PlayerSpawn = function(ply) ply:SetArmor(50) end,
     category = "Civil Protection",
+    level = 5,
 })
 
 TEAM_SECRET = DarkRP.createJob("Secret Service", {
    color = Color(24, 196, 144, 255),
-   model = {"smith.mdl"},
+   model = {"models/player/smith.mdl"},
    description = [[Protect the mayor. At all costs.]],
-   weapons = {m9k_mp5,m9k_colt1911,stunstick},
+   weapons = {"m9k_mp5", "m9k_colt1911", "m9k_mp9", "stunstick"},
    command = "Secret Service",
    max = 2,
-   salary = 100,
+   salary = 120,
    admin = 0,
    vote = true,
    hasLicense = true,
@@ -86,21 +90,22 @@ TEAM_SECRET = DarkRP.createJob("Secret Service", {
    hobo = false,
    cook = false,
    category = "Civil Protection",
+   level = 0,
 })
 
 TEAM_SWAT = DarkRP.createJob("S.W.A.T.", {
     color = Color(0, 255, 255, 255),
-    model = {"models/csgoswat1pm.mdl","models/csgoswat2pm.mdl","models/csgoswat3pm.mdl","models/csgoswat4pm.mdl"},
+    model = {"models/player/swat.mdl"},
     description = [[Works alongside civil protection, used to defend against raids and keep order and gives gun license.
-	   RAID - No
-	   MUG - No
-	   PRINT - Yes
-	   Use E+R to change Fire Mode on certain weapons.
+       RAID - No
+       MUG - No
+       PRINT - Yes
+       Use E+R to change Fire Mode on certain weapons.
        Yu need to get promoted from Civil Protection.]],
-    weapons = {"arrest_stick", "unarrest_stick", "m9k_usp", "m9k_mp5", "stunstick", "door_ram", "weaponchecker"},
+    weapons = {"arrest_stick", "unarrest_stick", "m9k_usp", "m9k_mp5", "stunstick", "door_ram", "weaponchecker", "breachingcharge", "bb_css_smoke_alt"},
     command = "swat",
     max = 4,
-    salary = GAMEMODE.Config.normalsalary * 1.78,
+    salary = 100,
     admin = 0,
     vote = true,
     hasLicense = true,
@@ -108,7 +113,9 @@ TEAM_SWAT = DarkRP.createJob("S.W.A.T.", {
         ["pistol"] = 30,
         ["smg1"] = 60,
     },
+    PlayerSpawn = function(ply) ply:SetArmor(50) end,
     category = "Civil Protection",
+    level = 10,
 })
 
 //TEAM_SWAT = DarkRP.createJob("Tactical S.W.A.T.", {
@@ -137,7 +144,7 @@ TEAM_SWAT = DarkRP.createJob("S.W.A.T.", {
 
 TEAM_SWATL = DarkRP.createJob("S.W.A.T. Leader", {
     color = Color(20, 20, 255, 255),
-    model = {"models/csgogign1pm.mdl", "models/csgogign2pm.mdl", "models/csgogign3pm.mdl", "models/csgogign4pm.mdl"},
+    model = {"models/player/urban.mdl"},
     description = [[The protector of every citizen that lives in the city.
         You have the power to arrest criminals and protect innocents.
         Hit a player with your arrest baton to put them in jail.
@@ -147,10 +154,10 @@ TEAM_SWATL = DarkRP.createJob("S.W.A.T. Leader", {
         Type /wanted <name> to alert the public to the presence of a criminal.
         Use E+R to change Fire Mode on certain weapons.
         You need to get promoted from S.W.A.T.]],
-    weapons = {"arrest_stick", "unarrest_stick", "m9k_m92beretta", "m9k_honeybadger", "stunstick", "door_ram", "weaponchecker", "handcuffs"},
+    weapons = {"arrest_stick", "unarrest_stick", "m9k_m92beretta", "m9k_honeybadger", "stunstick", "door_ram", "weaponchecker", "handcuffs", "breachingcharge", "bb_css_smoke_alt"},
     command = "swatl",
     max = 1,
-    salary = 150,
+    salary = 170,
     admin = 0,
     vote = true,
     hasLicense = true,
@@ -168,7 +175,9 @@ TEAM_SWATL = DarkRP.createJob("S.W.A.T. Leader", {
         ["ar2"] = 60,
     },
     NeedToChangeFrom = TEAM_SWAT,
+    PlayerSpawn = function(ply) ply:SetArmor(50) end,
     category = "Civil Protection",
+    level = 15,
 })
 
 TEAM_SWATS = DarkRP.createJob("S.W.A.T. Sniper", {
@@ -182,10 +191,10 @@ TEAM_SWATS = DarkRP.createJob("S.W.A.T. Sniper", {
         The Battering Ram can also unfreeze frozen props (if enabled).
         Type /wanted <name> to alert the public to the presence of a criminal.
         You need to get promoted from S.W.A.T.]],
-    weapons = {"arrest_stick", "unarrest_stick", "m9k_m92beretta", "bb_awp_alt", "stunstick", "door_ram", "weaponchecker", "handcuffs"},
+    weapons = {"arrest_stick", "unarrest_stick", "m9k_m92beretta", "bb_awp_alt", "stunstick", "door_ram", "weaponchecker", "handcuffs", "bb_css_smoke_alt"},
     command = "swats",
     max = 1,
-    salary = 120,
+    salary = 140,
     admin = 0,
     vote = true,
     hasLicense = true,
@@ -199,7 +208,9 @@ TEAM_SWATS = DarkRP.createJob("S.W.A.T. Sniper", {
         "Type /jailpos to set the jail position"
     },
     NeedToChangeFrom = TEAM_SWAT,
+    PlayerSpawn = function(ply) ply:SetArmor(50) end,
     category = "Civil Protection",
+    level = 10,
 })
 
  TEAM_THIEF = DarkRP.createJob("Thief", {
@@ -208,27 +219,34 @@ TEAM_SWATS = DarkRP.createJob("S.W.A.T. Sniper", {
     description = [[You are a thief, rob people, lockpick their house and steal their plants and legal printers.]],
     weapons = {"lockpick", "keypad_cracker"},
     command = "thief",
-    max = 2,
-    salary = 65,
+    max = 4,
+    salary = 85,
     admin = 0,
     vote = true,
     hasLicense = false,
     category = "Gangsters",
+    level = 0,
 })
 
  TEAM_MTHIEF = DarkRP.createJob("Master Thief", {
     color = Color(0, 0, 0, 255),
     model = "models/player/arctic.mdl",
     description = [[You are a thief, rob people, lockpick their house and steal their plants and legal printers.]],
-    weapons = {"lockpick", "m9k_tec9,pro_lockpick"},
+    weapons = {"m9k_tec9", "m9k_val", "pro_lockpick_update", "keypad_cracker"},
     command = "mthief",
     max = 4,
-    salary = 110,
+    salary = 130,
     admin = 0,
     vote = false,
     hasLicense = false,
-    NeedToChangeFrom = TEAM_THIEF,
-    category = "Gangsters",
+    customCheck = function(ply) return ply:GetUserGroup() == "donator" or ply:GetUserGroup() == "superadmin" or ply:GetUserGroup() == "co-owner" end,
+    PlayerSpawn = function(ply) ply:SetArmor(100) end,
+    ammo = {
+        ["pistol"] = 29,
+        ["ar2"] = 60,
+    },
+    category = "Custom Jobs",
+    level = 0,
 })
 
 TEAM_MOB = DarkRP.createJob("Mob boss", {
@@ -241,11 +259,12 @@ TEAM_MOB = DarkRP.createJob("Mob boss", {
     weapons = {"lockpick", "keypad_cracker", "unarrest_stick"},
     command = "mobboss",
     max = 1,
-    salary = GAMEMODE.Config.normalsalary * 1.34,
+    salary = 80,
     admin = 0,
     vote = false,
     hasLicense = false,
     category = "Gangsters",
+    level = 0,
 })
 
 TEAM_GUARD = DarkRP.createJob("Guard", {
@@ -253,31 +272,32 @@ TEAM_GUARD = DarkRP.createJob("Guard", {
     model = "models/player/barney.mdl",
     description = [[People will pay for protection, use your weapon or buy one from the local gundealer.
     For Hire by both CP and Gangsters.
-	MUG-No
-	PRINT- No
-	RAID- Yes, but only defending the buyer]],
+    MUG-No
+    PRINT- No
+    RAID- Yes, but only defending the buyer]],
     weapons = {"m9k_deagle"},
     command = "guard",
     max = 2,
-    salary = 85,
+    salary = 105,
     admin = 0,
     vote = false,
     hasLicense = true,
     category = "For Hire",
+    level = 0,
 })
 
 TEAM_MERC = DarkRP.createJob("Mercenary", {
     color = Color(191, 0, 0, 255),
     model = {"models/player/guerilla.mdl"},
     description = [[A private contractor that is willing to help in raids - at a cost...
-	   MUG - No
-	   PRINT - Yes
-	   RAID - Yes, you are paid to help others
-	   Use E+R to change Fire Mode on certain weapons.]],
+       MUG - No
+       PRINT - Yes
+       RAID - Yes, you are paid to help others
+       Use E+R to change Fire Mode on certain weapons.]],
     weapons = {"unarrest_stick", "m9k_hk45", "m9k_ak47", "stunstick", "door_ram"},
     command = "merc",
     max = 4,
-    salary = GAMEMODE.Config.normalsalary * 1.78,
+    salary = 100,
     admin = 0,
     vote = true,
     hasLicense = true,
@@ -287,6 +307,29 @@ TEAM_MERC = DarkRP.createJob("Mercenary", {
         ["ar2"] = 60,
     },
     category = "For Hire",
+    level = 0,
+})
+
+TEAM_GANGSTER_MEDIC = DarkRP.createJob("Gangster Medic", {
+   color = Color(155, 124, 44, 255),
+   model = {"models/player/leet.mdl"},
+   description = [[You are a medic to help in raids or base. Gangsters only.]],
+   weapons = {"med_kit",},
+   command = "gangstermedic",
+   max = 4,
+   salary = 100,
+   admin = 0,
+   vote = false,
+   hasLicense = false,
+   candemote = true,
+   -- CustomCheck
+   medic = false,
+   chief = false,
+   mayor = false,
+   hobo = false,
+   cook = false,
+   category = "Gangsters",
+   level = 0,
 })
 
 TEAM_CRIPLEADER = DarkRP.createJob("Cripz Leader", {
@@ -297,7 +340,7 @@ TEAM_CRIPLEADER = DarkRP.createJob("Cripz Leader", {
     weapons = {"m9k_ak47"}, 
     command = "cripleader", 
     max = 1, 
-    salary = 75, 
+    salary = 95, 
     admin = 0, 
     vote = false, 
     hasLicense = false, 
@@ -306,6 +349,7 @@ TEAM_CRIPLEADER = DarkRP.createJob("Cripz Leader", {
         ["ar2"] = 60,
     },
     category = "Gangsters",
+    level = 5,
 })
 
 TEAM_CRIP = DarkRP.createJob("Cripz Member", {
@@ -317,7 +361,7 @@ TEAM_CRIP = DarkRP.createJob("Cripz Member", {
     weapons = {"m9k_ak47"}, 
     command = "crip", 
     max = 5, 
-    salary = 60, 
+    salary = 80, 
     admin = 0, 
     vote = false, 
     hasLicense = false, 
@@ -326,6 +370,7 @@ TEAM_CRIP = DarkRP.createJob("Cripz Member", {
         ["ar2"] = 60,
     },
     category = "Gangsters",
+    level = 0,
 })
 
 TEAM_BLOODLEADER = DarkRP.createJob("Bloodz Leader", {
@@ -336,7 +381,7 @@ TEAM_BLOODLEADER = DarkRP.createJob("Bloodz Leader", {
     weapons = {"m9k_ak47"}, 
     command = "bloodleader", 
     max = 1, 
-    salary = 75, 
+    salary = 95, 
     admin = 0, 
     vote = false, 
     hasLicense = false, 
@@ -345,6 +390,7 @@ TEAM_BLOODLEADER = DarkRP.createJob("Bloodz Leader", {
         ["ar2"] = 60,
     },
     category = "Gangsters",
+    level = 5,
 })
 
 TEAM_BLOOD = DarkRP.createJob("Bloodz Member", {
@@ -356,7 +402,7 @@ TEAM_BLOOD = DarkRP.createJob("Bloodz Member", {
     weapons = {"m9k_ak47"}, 
     command = "blood", 
     max = 5, 
-    salary = 60, 
+    salary = 80, 
     admin = 0,
     vote = false, 
     hasLicense = false, 
@@ -365,6 +411,7 @@ TEAM_BLOOD = DarkRP.createJob("Bloodz Member", {
         ["ar2"] = 60,
     },
     category = "Gangsters",
+    level = 0,
 })
 
 TEAM_HITMAN = DarkRP.createJob("Hitman", {
@@ -376,7 +423,7 @@ TEAM_HITMAN = DarkRP.createJob("Hitman", {
     weapons = {"m9k_m24", "m9k_ak47", "suppressed_pistol"},
     command = "hitman",
     max = 1,
-    salary = 80,
+    salary = 100,
     admin = 0,
     vote = true,
     hasLicense = false,
@@ -386,6 +433,7 @@ TEAM_HITMAN = DarkRP.createJob("Hitman", {
         ["pistol"] = 36,
     },
     category = "For Hire",
+    level = 10,
 })
 
 TEAM_ADMIN = DarkRP.createJob("Admin On Duty", {
@@ -395,18 +443,19 @@ TEAM_ADMIN = DarkRP.createJob("Admin On Duty", {
     weapons = {},
     command = "aod",
     max = 5,
-    salary = 100,
+    salary = 120,
     admin = 0,
     vote = false,
     hasLicense = false,
-    customCheck = function(ply) return ply:GetUserGroup() == "trialadmin" or ply:GetUserGroup() == "admin" or ply:GetUserGroup() == "superadmin" end
+    customCheck = function(ply) return ply:GetUserGroup() == "trialadmin" or ply:GetUserGroup() == "admin" or ply:GetUserGroup() == "superadmin" or ply:GetUserGroup() == "co-owner" end,
+    level = 0,
 })
 
 TEAM_RAND = DarkRP.createJob("Randomo99's Boss Class", {
     color = Color(22, 234, 234, 255),
-    model = {"models/player/gasmask.mdl"},
+    model = "models/player/gasmask.mdl",
     description = [[Randomo99's Kick ass law enforcer]],
-    weapons = {"m9k_dragunov", "m9k_tar21"},
+    weapons = {"m9k_dragunov", "m9k_m98b", "m9k_tar21", "breachingcharge"},
     command = "Randomo99",
     max = 1,
     salary = 2000,
@@ -414,7 +463,7 @@ TEAM_RAND = DarkRP.createJob("Randomo99's Boss Class", {
     vote = false,
     hasLicense = true,
     candemote = false,
-    customCheck = function( ply ) return ply:SteamID() == "STEAM_0:0:155883051" end,
+    customCheck = function( ply ) return ply:GetUserGroup() == "co-owner" and ply:SteamID() == "STEAM_0:0:155883051" end,
     CustomCheckFailMsg = "You are not Randomo99!",
     medic = false,
     chief = false,
@@ -422,10 +471,42 @@ TEAM_RAND = DarkRP.createJob("Randomo99's Boss Class", {
     hobo = false,
     cook = false,
     ammo = {
-        ["ar2"] = 200,
-    }
-    category = "Civil Protection",
+        ["ar2"] = 400,
+        ["pistol"] = 50,
+    },
+    PlayerSpawn =  function(ply) ply:SetArmor(200) end,
+    category = "Custom Jobs",
+    level = 0
 })
+
+TEAM_MARINE = DarkRP.createJob("Marine's 'Luigi' Class", {
+    color = Color(22, 234, 234, 255),
+    model = "models/player/slow/luigi_gxy.mdl",
+    description = [[Marine when he's bored of being SWAT.]],
+    weapons = {"m9k_mp5", "m9k_ak47", "m9k_ak74", "m9k_mp40"},
+    command = "marine",
+    max = 1,
+    salary = 2000,
+    admin = 2,
+    vote = false,
+    hasLicense = true,
+    candemote = false,
+    customCheck = function( ply ) return ply:GetUserGroup() == "co-owner" and ply:SteamID() == "STEAM_0:0:100270354" end,
+    CustomCheckFailMsg = "You are not marinesciencedude!",
+    medic = false,
+    chief = false,
+    mayor = false,
+    hobo = false,
+    cook = false,
+    ammo = {
+        ["ar2"] = 200,
+        ["smg1"] = 400,
+    },
+    PlayerSpawn =  function(ply) ply:SetArmor(200) end,
+    category = "Custom Jobs",
+    level = 0,
+})
+
 
 --[[---------------------------------------------------------------------------
 Define which team joining players spawn into and what team you change to if demoted
@@ -442,14 +523,15 @@ GAMEMODE.CivilProtection = {
     [TEAM_POLICE] = true,
     [TEAM_CHIEF] = true,
     [TEAM_MAYOR] = true,
-	[TEAM_SWAT] = true,
+    [TEAM_SWAT] = true,
     [TEAM_SWATL] = true,
     [TEAM_SWATS] = true,
     [TEAM_RAND] = true,
+    [TEAM_MARINE] = true,
 }
 
 --[[---------------------------------------------------------------------------
 Jobs that are hitmen (enables the hitman menu)
 ---------------------------------------------------------------------------]]
 
-DarkRP.addHitmanTeam(TEAM_HITMAN)
+DarkRP.addHitmanTeam(TEAM_HITMAN, TEAM_RAND)
