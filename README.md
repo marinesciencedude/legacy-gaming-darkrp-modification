@@ -7,7 +7,6 @@ Are you looking at this addon from the github web page? There's a "Download zip"
 Just download and put in a folder in addons!
 
 ## Important Information
-
 ### Required Addons
 1. NOTE: The addon authors do not endorse the use of their addons in this addon.
 2. DarkRP (obvious) by (FPtje) Falco: http://steamcommunity.com/sharedfiles/filedetails/?id=248302805 or https://github.com/FPtje/DarkRP
@@ -27,7 +26,6 @@ Just download and put in a folder in addons!
 16. Breaching Charge SWEP by TRUMP.chewitdude: http://steamcommunity.com/sharedfiles/filedetails/?id=629541652
 17. NYPD Cop Player Models by Sal: http://steamcommunity.com/sharedfiles/filedetails/?id=629541652
 18. Levelling System by vrondakis: https://github.com/vrondakis/Leveling-System
-
 ### Miscellaneous
 1. lua/darkrp_config/disabled_defaults.lua:29 We have a custom HUD on the server so the f4 menu is disabled, simply set it to false if you do not have a custom HUD.
 
@@ -38,7 +36,6 @@ When Randomo99 realised we'd need more developers for bigger projects that I wou
 Feel free to use pull request for features you would like!
 
 ## Features
-
 ### Jobs (weapons and stats):
 1. NOTE: Any other Stock jobs are Level 0. All jobs with guns (excluding the Boss and 'Luigi' Class) have two magazines in reserve
 2. Police Officer (replaces CP) - Arrest Stick, Unarrest Stick, M9K Deseart Eagle, Stunstick, Door Ram, Weapon Checker, 25 Armour on Spawn, Level 0
@@ -59,7 +56,6 @@ Feel free to use pull request for features you would like!
 17. Admin on Duty - Level 0 (Trial Admin, Admin, Superadmin or Co-owner only)
 18. Randomo's Boss Class - M9K Dragunov, M9K M98b, M9K Tar21, Breaching Charge, 400 Ammo for Assault Rifleand 200 Ammo for Pistol, 200 Armour on Spawn, Level 0 (Only Randomo99 can use it)
 19. Marine's 'Luigi' Class - M9K AK47, M9K AK74, M9K MP5, M9K MP40, 400 Ammo for Assault Rifle and 400 Ammo for SMG, 200 Armour on Spawn, Level 0 (Only mariesciencdude - me - can use it)
-
 ### Shipments
 1. NOTE: All shipments are in x10 weapon bundles or single weapons. Prices listed are single weapons, shipments cost 10 times more than single weapons.
 2. M9K AK47 - Price: $4000
@@ -81,7 +77,6 @@ Feel free to use pull request for features you would like!
 18. M9K SCAR - Price: $6000
 19. M9K TAR-21 - Price: $5000
 20. M9K Val - Price: $5575
-
 ### Ammo
 1. ar2 (Assault Rifle) - Amount: 30, Price: $100
 2. M9K Sniper Penertration Ammo - Amount: 50, Price: $120
