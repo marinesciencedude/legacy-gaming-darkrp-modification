@@ -16,8 +16,8 @@ This is for people who know how to script Lua.
 ---------------------------------------------------------------------------]]
 -- Example: GAMEMODE:AddGroupChat(TEAM_MOB, TEAM_GANG)
 -- Example: GAMEMODE:AddGroupChat(function(ply) return ply:isCP() end)
-GAMEMODE:AddGroupChat (TEAM_RAND, TEAM_SWATL, TEAM_SWATS, TEAM_SWAT),
-GAMEMODE:AddGroupChat (TEAM_MAYOR, TEAM_SECRET),
-GAMEMODE:AddGroupChat (TEAM_BLOOD, TEAM_BLOODLEADER),
-GAMEMODE:AddGroupChat (TEAM_CRIP, TEAM_CRIPLEADER),
-GAMEMODE:AddGroupChat (TEAM_POLICE, TEAM_CHEIF),
+GAMEMODE:AddGroupChat(TEAM_RAND, TEAM_SWATL, TEAM_SWATS, TEAM_SWAT)
+GAMEMODE:AddGroupChat(TEAM_MAYOR, TEAM_SECRET)
+GAMEMODE:AddGroupChat(TEAM_BLOOD, TEAM_BLOODLEADER)
+GAMEMODE:AddGroupChat(TEAM_CRIP, TEAM_CRIPLEADER)
+GAMEMODE:AddGroupChat(TEAM_POLICE, TEAM_CHEIF)
