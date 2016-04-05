@@ -27,13 +27,13 @@ Just download and put in a folder in addons!
 17. Levelling System by vrondakis: https://github.com/vrondakis/Leveling-System
 NOTE: The addon authors do not endorse the use of their addons in this addon.
 ### Miscellaneous ###
--lua/darkrp_config/disabled_defaults.lua:29 We have a custom HUD on the server so the f4 menu is disabled, simply set it to false if you do not have a custom HUD.
+1. lua/darkrp_config/disabled_defaults.lua:29 We have a custom HUD on the server so the f4 menu is disabled, simply set it to false if you do not have a custom HUD.
 
 ##  Backstory ##
 When my server first went up, we needed a gamemode that we would be on most of the time - so it was Randomo99 who suggested it.
 With my excellent programming skills and great wifi for searching up guides quickly, combined with Randomo99's ideas, I was able to successfully create an addon that would supply all our needs and that I could manage easily. 
 When Randomo99 realised we'd need more developers for bigger projects that I would never be able to do myself -  with my lack of proper knowledge of DarkRP and the GMod Lua API itself - I suggested putting this up on GitHub so developing the addon would be easier for the two of us and future developers. 
-Feel free to request pulls for features you would like!
+Feel free to use pull request for features you would like!
 
 ## Features ##
 ### Jobs (weapons and stats): ###
