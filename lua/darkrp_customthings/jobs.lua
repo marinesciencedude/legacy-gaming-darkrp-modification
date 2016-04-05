@@ -28,7 +28,7 @@ TEAM_POLICE = DarkRP.createJob("Police Officer", {
         The Battering Ram can also unfreeze frozen props (if enabled).
         Type /wanted <name> to alert the public to the presence of a criminal.
         You can get promoted to S.W.A.T. or Civil Protection Chief.]],
-    weapons = {"arrest_stick", "unarrest_stick", "m9k_deagle", "stunstick", "door_ram", "weaponchecker"},
+    weapons = {"arrest_stick", "unarrest_stick", "m9k_deagle", "stunstick", "door_ram", "weaponchecker", "weapon_cuff_police"},
     command = "cp",
     max = 4,
     salary = 85,
@@ -53,7 +53,7 @@ TEAM_CHIEF = DarkRP.createJob("Police Chief", {
         The Battering Ram can break down the door of a criminal, with a warrant for his/her arrest.
         Type /wanted <name> to alert the public to the presence of a criminal.
         Type /jailpos to set the Jail Position]],
-    weapons = {"arrest_stick", "unarrest_stick", "m9k_acr", "m9k_deagle", "stunstick", "door_ram", "weaponchecker"},
+    weapons = {"arrest_stick", "unarrest_stick", "m9k_acr", "m9k_deagle", "stunstick", "door_ram", "weaponchecker", "weapon_cuff_police"},
     command = "chief",
     max = 1,
     salary = 95,
@@ -75,7 +75,7 @@ TEAM_SECRET = DarkRP.createJob("Secret Service", {
    color = Color(24, 196, 144, 255),
    model = {"models/player/smith.mdl"},
    description = [[Protect the mayor. At all costs.]],
-   weapons = {"m9k_mp5", "m9k_colt1911", "m9k_mp9", "stunstick"},
+   weapons = {"m9k_mp5", "m9k_colt1911", "m9k_mp9", "stunstick", "weapon_cuff_police"},
    command = "Secret Service",
    max = 2,
    salary = 120,
@@ -102,7 +102,7 @@ TEAM_SWAT = DarkRP.createJob("S.W.A.T.", {
        PRINT - Yes
        Use E+R to change Fire Mode on certain weapons.
        Yu need to get promoted from Civil Protection.]],
-    weapons = {"arrest_stick", "unarrest_stick", "m9k_usp", "m9k_mp5", "stunstick", "door_ram", "weaponchecker", "breachingcharge", "bb_css_smoke_alt"},
+    weapons = {"arrest_stick", "unarrest_stick", "m9k_usp", "m9k_mp5", "stunstick", "door_ram", "weaponchecker", "breachingcharge", "bb_css_smoke_alt", "weapon_cuff_police"},
     command = "swat",
     max = 4,
     salary = 100,
@@ -154,7 +154,7 @@ TEAM_SWATL = DarkRP.createJob("S.W.A.T. Leader", {
         Type /wanted <name> to alert the public to the presence of a criminal.
         Use E+R to change Fire Mode on certain weapons.
         You need to get promoted from S.W.A.T.]],
-    weapons = {"arrest_stick", "unarrest_stick", "m9k_m92beretta", "m9k_honeybadger", "stunstick", "door_ram", "weaponchecker", "handcuffs", "breachingcharge", "bb_css_smoke_alt"},
+    weapons = {"arrest_stick", "unarrest_stick", "m9k_m92beretta", "m9k_honeybadger", "stunstick", "door_ram", "weaponchecker", "weapon_cuff_police", "breachingcharge", "bb_css_smoke_alt"},
     command = "swatl",
     max = 1,
     salary = 170,
@@ -191,7 +191,7 @@ TEAM_SWATS = DarkRP.createJob("S.W.A.T. Sniper", {
         The Battering Ram can also unfreeze frozen props (if enabled).
         Type /wanted <name> to alert the public to the presence of a criminal.
         You need to get promoted from S.W.A.T.]],
-    weapons = {"arrest_stick", "unarrest_stick", "m9k_m92beretta", "bb_awp_alt", "stunstick", "door_ram", "weaponchecker", "handcuffs", "bb_css_smoke_alt"},
+    weapons = {"arrest_stick", "unarrest_stick", "m9k_m92beretta", "bb_awp_alt", "stunstick", "door_ram", "weaponchecker", "weapon_cuff_police", "bb_css_smoke_alt"},
     command = "swats",
     max = 1,
     salary = 140,
