@@ -12,4 +12,4 @@ AddDoorGroup("NAME OF THE GROUP HERE, you will see this when looking at a door",
 -- Example: AddDoorGroup("Cops and Mayor only", TEAM_CHIEF, TEAM_POLICE, TEAM_MAYOR)
 -- Example: AddDoorGroup("Gundealer only", TEAM_GUN)
 
-AddDoorGroup("Cops and Mayor only", TEAM_CHIEF, TEAM_POLICE, TEAM_MAYOR, TEAM_SWAT, TEAM_GUARD, TEAM_SWATL, TEAM_SWATS, TEAM_RAND, TEAM_SECRET)
+AddDoorGroup("Cops and Mayor only", TEAM_CHIEF, TEAM_POLICE, TEAM_SECRET, TEAM_MAYOR, TEAM_SWAT, TEAM_GUARD, TEAM_SWATL, TEAM_SWATS, TEAM_UNDERCOVER, TEAM_RAND)

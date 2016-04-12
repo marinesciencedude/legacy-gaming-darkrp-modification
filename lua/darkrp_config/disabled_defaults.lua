@@ -123,7 +123,7 @@ Ammo packets
 ---------------------------------------------------------------------------]]
 DarkRP.disabledDefaults["ammo"] = {
 	["Pistol ammo"]  = false,
-	["Rifle ammo"]   = false,
+	["Rifle ammo"]   = true,
 	["Shotgun ammo"] = false,
 }
 

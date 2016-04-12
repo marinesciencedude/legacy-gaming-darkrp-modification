@@ -49,6 +49,7 @@ NOTE: Any other Stock jobs are Level 0. All jobs with guns (excluding the Boss a
 	<li>S.W.A.T. - Arrest Stick, Unarrest Stick, M9K USP, M9K MP5, Stun Stick, Door Ram, Weapon Checker, Breaching Charge, CS:S Alt Smoke Grenade, 50 Armour on Spawn, Level 10.</li>
 	<li>S.W.A.T. Leader - Arrest Stick, Unarrest Stick, M9K M92 Beretta, M9K Honeybadger, Stun Stick, Door Ram, Weapon Checker, Breaching Charge, CS:S Alt Smoke Grenade, 50 Armour on Spawn, Level 15.</li>
 	<li>S.W.A.T. Sniper - Arrest Stick, Unarrest Stick, M9K M92 Beretta, CS:S Alt AWP, Stun Stick, Door Ram, Weapon Checker, CS:S Alt Smoke Grenade, 50 Armour on Spawn, Level 10.</li>
+	<li>Undercover Cop - Ultimate Disguse Kit, Level 0.</li>
 	<li>Thief - Lock Pick, Keypad Cracker, Level 0.</li>
 	<li>Master Thief - M9K Tec9, M9K Val, Pro Lockpick, Keypad Cracker, 100 Armour on Spawn, Level 0 (Donator or Super Admin, Co-owner only).</li>
 	<li>Mob Boss - Lockpick, Keypad Cracker, Unarrest Stick, Level 0.</li>
@@ -58,6 +59,7 @@ NOTE: Any other Stock jobs are Level 0. All jobs with guns (excluding the Boss a
 	<li>Cripz/Bloodz Leaders (same) - M9K AK47, Level 5.</li>
 	<li>Cripz/Bloodz Members (same) - M9K AK47, Level 0.</li>
 	<li>Hitman - M9K M24, M9K AK47, Surpressed Pistol, Level 10.</li>
+	<li>Traitor - Ultimate Disguise Kit, Level 0.</li>
 	<li>Admin on Duty - Level 0 (Trial Admin, Admin, Superadmin or Co-owner only).</li>
 	<li>Randomo's Boss Class - M9K Dragunov, M9K M98b, M9K Tar21, Breaching Charge, 400 Ammo for Assault Rifleand 200 Ammo for Pistol, 200 Armour on Spawn, Level 0 (Only Randomo99 can use it).</li>
 	<li>Marine's 'Luigi' Class - M9K AK47, M9K AK74, M9K MP5, M9K MP40, 400 Ammo for Assault Rifle and 400 Ammo for SMG, 200 Armour on Spawn, Level 0 (Only mariesciencdude - me - can use it).</li>
@@ -86,6 +88,7 @@ NOTE: All shipments are in x10 weapon bundles or single weapons. Prices listed a
 </ol>
 ### Ammo
 <ol>
-	<li>ar2 (Assault Rifle) - Amount: 30, Price: $100</li>
-	<li>M9K Sniper Penertration Ammo - Amount: 50, Price: $120</li>
+	<li>smg1 (renamed from Rifle Ammo to SMG Ammo ingame) - Amount: 30, Price: $150</li>
+	<li>ar2 (known as Assault Rifle Ammo ingame) - Amount: 30, Price: $200</li>
+	<li>M9K Sniper Penetration Ammo (known as Sniper Rounds ingame) - Amount: 50, Price: $250</li>
 </ol>

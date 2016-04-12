@@ -213,6 +213,28 @@ TEAM_SWATS = DarkRP.createJob("S.W.A.T. Sniper", {
     level = 10,
 })
 
+TEAM_UNDERCOVER = DarkRP.createJob("Undercover Cop", {
+   color = Color(91, 130, 188, 255),
+   model = {"models/player/leet.mdl"},
+   description = [[You are a master of stealth, infiltrate into bases and walk among them. Find out their plans and confiscate anything. Do NOT blow your cover unless needed.]],
+   weapons = {m9k_sig_p229r, ultimate_disguise_kit},
+   command = "Undercover",
+   max = 2,
+   salary = 180,
+   admin = 0,
+   vote = true,
+   hasLicense = true,
+   candemote = false,
+   -- CustomCheck
+   medic = false,
+   chief = false,
+   mayor = false,
+   hobo = false,
+   cook = false,
+   category = "Civil Protection",
+})
+
+
  TEAM_THIEF = DarkRP.createJob("Thief", {
     color = Color(128, 128, 128, 255),
     model = "models/player/suits/robber_open.mdl",
@@ -435,6 +457,28 @@ TEAM_HITMAN = DarkRP.createJob("Hitman", {
     category = "For Hire",
     level = 10,
 })
+
+TEAM_TRAITOR = DarkRP.createJob("Traitor", {
+   color = Color(127, 49, 49, 255),
+   model = {"models/player/Suits/male_02_open_waistcoat.mdl"},
+   description = [[An inside man, a paid traitor.]],
+   weapons = {"ultimate_disguise_kit"},
+   command = "Traitor",
+   max = 1,
+   salary = 100,
+   admin = 0,
+   vote = true,
+   hasLicense = false,
+   candemote = true,
+   -- CustomCheck
+   medic = false,
+   chief = false,
+   mayor = false,
+   hobo = false,
+   cook = false,
+   category = "Citizens",
+})
+
 
 TEAM_ADMIN = DarkRP.createJob("Admin On Duty", {
     color = Color(170, 0, 0, 255),

@@ -57,24 +57,31 @@ Rifle ammo, usually used by assault rifles
 Example 3:
 
 DarkRP.createAmmoType("smg1", {
-	name = "Rifle ammo",
+	name = "SMG Ammo",
 	model = "models/Items/BoxMRounds.mdl",
-	price = 80,
+	price = 150,
 	amountGiven = 30
 })
 
 Add new ammo types under the next line!
 ---------------------------------------------------------------------------]]
-DarkRP.createAmmoType("ar2", {
-	name = "Pulse ammo",
+DarkRP.createAmmoType("smg1", {
+	name = "SMG Ammo",
 	model = "models/Items/BoxMRounds.mdl",
-	price = 100,
+	price = 150,
+	amountGiven = 30
+})
+
+DarkRP.createAmmoType("ar2", {
+	name = "Assault Rifle ammo",
+	model = "models/Items/BoxMRounds.mdl",
+	price = 200,
 	amountGiven = 30
 })
 
 DarkRP.createAmmoType("SniperPenetratedRound", {
-	name = "Sniper rounds",
+	name = "Sniper Rounds",
 	model = "models/items/sniper_round_box.mdl",
-	price = 120,
+	price = 250,
 	amountGiven = 50
 })
